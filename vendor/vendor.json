@@ -21,76 +21,10 @@
 			"revisionTime": "2016-08-01T03:09:57Z"
 		},
 		{
-			"checksumSHA1": "1Hm7Ij3YHAqBbxLCcGr4NKbI6e0=",
-			"path": "github.com/codegangsta/inject",
-			"revision": "33e0aa1cb7c019ccc3fbe049a8262a6403d30504",
-			"revisionTime": "2015-01-14T23:56:00Z"
-		},
-		{
-			"checksumSHA1": "7bJJxX3dYxil97O4P59IZx/xTQQ=",
-			"path": "github.com/eclipse/paho.mqtt.golang",
-			"revision": "44eec149d4433449add74781ffc86cc60d3f1598",
-			"revisionTime": "2016-06-30T14:40:56Z"
-		},
-		{
-			"checksumSHA1": "c03puLfhf7toeIMmZBLkIaMqX5M=",
-			"path": "github.com/eclipse/paho.mqtt.golang/packets",
-			"revision": "44eec149d4433449add74781ffc86cc60d3f1598",
-			"revisionTime": "2016-06-30T14:40:56Z"
-		},
-		{
-			"checksumSHA1": "SvNimSKDmJopJXAiz42vOPDKdvA=",
-			"path": "github.com/elazarl/go-bindata-assetfs",
-			"revision": "30f82fa23fd844bd5bb1e5f216db87fd77b5eb43",
-			"revisionTime": "2017-02-27T21:27:28Z"
-		},
-		{
-			"checksumSHA1": "znWC6f805yVBkBuPINiV+cFXi5g=",
-			"path": "github.com/go-macaron/bindata",
-			"revision": "85786f57eee3e5544a9cc24fa2afe425b97a8652",
-			"revisionTime": "2016-12-22T09:30:48Z"
-		},
-		{
-			"checksumSHA1": "N0l/R2eYqEhyNdWiY/A+S9mMAEE=",
-			"path": "github.com/go-macaron/binding",
-			"revision": "48920167fa152d02f228cfbece7e0f1e452d200a",
-			"revisionTime": "2016-12-22T07:05:54Z"
-		},
-		{
-			"checksumSHA1": "Imqg7KazslTICOQ0Iyu/GgYZpPA=",
-			"path": "github.com/go-macaron/cache",
-			"revision": "56173531277692bc2925924d51fda1cd0a6b8178",
-			"revisionTime": "2015-10-13T08:11:02Z"
-		},
-		{
 			"checksumSHA1": "16YW7XYD4QwN5hf94NBhR70r858=",
 			"path": "github.com/go-macaron/inject",
 			"revision": "d8a0b8677191f4380287cfebd08e462217bac7ad",
 			"revisionTime": "2016-06-27T17:00:12Z"
-		},
-		{
-			"checksumSHA1": "AtI2wKvKTag/BASZPcdTd/KAjis=",
-			"path": "github.com/go-martini/martini",
-			"revision": "c257c412d547ac70fcaf5596c1a50a7cb832c1fc",
-			"revisionTime": "2016-06-18T11:20:59Z"
-		},
-		{
-			"checksumSHA1": "7VjWBbxIJUYXCoFzUp8p1E4jvUo=",
-			"path": "github.com/go-sql-driver/mysql",
-			"revision": "0b58b37b664c21f3010e836f1b931e1d0b0b0685",
-			"revisionTime": "2016-08-02T11:38:42Z"
-		},
-		{
-			"checksumSHA1": "K9z4s8s/b23iHFRU4ar334A0Oxc=",
-			"path": "github.com/go-xorm/core",
-			"revision": "5bf745d7d163f4380e6c2bba8c4afa60534dd087",
-			"revisionTime": "2016-08-05T15:24:16Z"
-		},
-		{
-			"checksumSHA1": "ppLBMyGMvSZy3vdQyc4U6zZPp00=",
-			"path": "github.com/go-xorm/xorm",
-			"revision": "c6c705684057842d9854e8299dd51abb06ae29f5",
-			"revisionTime": "2016-08-05T14:35:15Z"
 		},
 		{
 			"checksumSHA1": "vTUi72FPeKodpgaHf09p9TMEUPQ=",
@@ -105,28 +39,10 @@
 			"revisionTime": "2016-09-27T16:42:31Z"
 		},
 		{
-			"checksumSHA1": "HUXE+Nrcau8FSaVEvPYHMvDjxOE=",
-			"path": "github.com/satori/go.uuid",
-			"revision": "b061729afc07e77a8aa4fad0a2fd840958f1942a",
-			"revisionTime": "2016-09-27T10:08:44Z"
-		},
-		{
 			"checksumSHA1": "ejWaWI/IIFwfHh6vTgV2z+C9x1o=",
 			"path": "github.com/urfave/negroni",
 			"revision": "5d815f907a182b6131cc88af3f17f898b93142a5",
 			"revisionTime": "2016-08-30T03:03:02Z"
-		},
-		{
-			"checksumSHA1": "1MGpGDQqnUoRpv7VEcQrXOBydXE=",
-			"path": "golang.org/x/crypto/pbkdf2",
-			"revision": "728b753d0135da6801d45a38e6f43ff55779c5c2",
-			"revisionTime": "2017-01-24T01:46:54Z"
-		},
-		{
-			"checksumSHA1": "likOl7O0BJntqagR050kkOBuY4o=",
-			"path": "golang.org/x/net/websocket",
-			"revision": "075e191f18186a8ff2becaf64478e30f4545cdad",
-			"revisionTime": "2016-08-05T06:12:51Z"
 		},
 		{
 			"checksumSHA1": "JfoyvAR8hQX+3qYsXYIelONxTyg=",
@@ -147,5 +63,5 @@
 			"revisionTime": "2017-01-16T02:55:58Z"
 		}
 	],
-	"rootPath": "dhgoweb"
+	"rootPath": "mapserver"
 }

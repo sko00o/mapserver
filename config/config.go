@@ -1,29 +1,22 @@
 package config
 
 import (
-	"fmt"
-
 	log "github.com/Sirupsen/logrus"
 	"gopkg.in/ini.v1"
 )
 
 type Config struct {
 	//HTTP
-	HttpServerWin   string `ini:"http_server_win"`
-	HttpServerLinux string `ini:"http_server_linux"`
+	HTTPServerWin   string `ini:"http_server_win"`
+	HTTPServerLinux string `ini:"http_server_linux"`
 	//LOG
 	LogDirWin   string `ini:"log_dir_win"`
 	LogDirLinux string `ini:"log_dir_linux"`
 	LogPrefix   string `ini:"log_prefix"`
-}
-
-func (c Config) String() string {
-
-	http := fmt.Sprintf("HTTP:[%v]/[%v]", c.HttpServerWin, c.HttpServerLinux)
-
-	log := fmt.Sprintf("LOG:[win:%v]/[linux:%v]:[prefix:%v]", c.LogDirWin, c.LogDirLinux, c.LogPrefix)
-
-	return http + ", " + log
+	//MAP
+	CenterLat float64 `ini:"center_latitude"`
+	CenterLng float64 `ini:"center_longitude"`
+	ZoomLevel int     `ini:"zoom_level"`
 }
 
 //Read Server's Config Value from "path"

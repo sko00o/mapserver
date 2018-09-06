@@ -41,9 +41,9 @@ func run(c *cli.Context) error {
 	//start http server
 	go func() {
 		if runtime.GOOS == "windows" {
-			httpserver.StartHttpServer(conf.HttpServerWin)
+			httpserver.StartHttpServer(conf.HTTPServerWin, conf)
 		} else {
-			httpserver.StartHttpServer(conf.HttpServerLinux)
+			httpserver.StartHttpServer(conf.HTTPServerLinux, conf)
 		}
 	}()
 

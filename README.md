@@ -1,19 +1,7 @@
-# mapserver
-offline map service
+# Simple map server
 
-backend : It's easy to do. You only make a web service .You shuold have interface to parse the frontend’s request and return  map tiles.
+1. Use [MapDownloader](http://pan.baidu.com/s/1miMF9nM) to download map tiles. put `_alllayers` in public.
 
+1. Display map via `leaflet.js`.
 
-frontend : 1.https://unpkg.com/leaflet@1.0.3/dist/leaflet.css (You shuold download and reference them on the web page .)
-		   2.https://unpkg.com/leaflet@1.0.3/dist/leaflet.js  (https://leafletjs.com)
-		 
-material : map tiles. How can we download the map tiles? 
-		   http://pan.baidu.com/s/1miMF9nM (You can download the MapDownloader and download the tiles.)
-		
-MapDownloader:
-		![Image](https://raw.githubusercontent.com/578157900/mapserver/master/image/mapdownloader.png)
-			
-Web:
-		![Image](https://raw.githubusercontent.com/578157900/mapserver/master/image/map.png) 
-
-
+Thanks to [lumor](https://github.com/578157900).
