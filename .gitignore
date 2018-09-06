@@ -1,0 +1,7 @@
+map
+public/*
+!public/dist
+vendor/*
+!vendor/vendor.json
+*.log
+assets
