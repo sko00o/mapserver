@@ -1,69 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>mapserver</title>
-	<link rel="stylesheet" href="/dist/leaflet/leaflet.css" />
+    <title>mapserver</title>
+    <link rel="stylesheet" href="/dist/leaflet/leaflet.css" />
 </head>
-
 <body id="body">
-	<div id="map" style="height:100vh; position: relative; z-index: 1;"></div>
+    <div id="map" style="height:100vh; position: relative; z-index: 1;" >
+	</div>
 </body>
-<script src="/dist/leaflet/leaflet.js"></script>
-<script type="text/javascript">
-	var amapNormalUrl = 'http://{{.server_host}}/localmap/{z}/{x}/{y}';
+	<script src="/dist/leaflet/leaflet.js"></script>
+    <script type="text/javascript">
+	var amapNormalUrl = 'http://localhost:{{.map_server_port}}/localmap/normal/{z}/{x}/{y}';
 	var amapNormalLayer = new L.TileLayer(amapNormalUrl, {
-		minZoom: 1,
-		maxZoom: 18,
-		attribution: '自定义的地图服务',
+	    minZoom : 1,
+	    maxZoom : 18,
+	    attribution : '简单地图服务'
 	});
-	let [lat,lng] = [{{.latitude}}, {{.longitude}}];
-	var mapCenter = new L.LatLng(lat,lng);
+	
+	var mapCenter = new L.LatLng(22.4994,113.5308);
 	var map = new L.Map('map', {
-		center: mapCenter,
-		renderer: L.canvas(),
-		zoom: {{.zoom_level}},
-		minZoom: 14,
-		maxZoom: 15,
-		layers: [amapNormalLayer],
+	        center : mapCenter,
+			renderer: L.canvas(),
+	        zoom : 14,
+	        minZoom: 1,
+	        maxZoom: 15,
+	        layers : [ amapNormalLayer ],
 	});
-
-
-	var marker = L.marker([lat,lng]).addTo(map);
-	var circle = L.circle([lat+0.01,lng], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
-		radius: 500
-	}).addTo(map);
-
-	var polygon = L.polygon([
-    [lat-0.03, lng-0.08],
-    [lat+0.01, lng-0.06],
-    [lat+0.02, lng-0.047]
-	]).addTo(map);
-
-	let name="test",ip = 1,temp=31,power='30%',viewtime='2018-09-05',mac='123:123:123:123';
-	let popdiv = "<div class='content'><p>"+name+"</p><br/><table><tr><td>IP：</td><td>" + ip + "</td></tr><tr><td>温度：</td><td>" + temp + "°C</td></tr><tr><td>电量：</td><td>" + power + "</td></tr><tr><td>上报时间：</td><td>" + viewtime + "</td></tr><tr><td>坐标：</td><td>(" + lat + "," + lng + ")</td></tr></table></div><div id='back_click' align='right'><a id='btback' href='/record?mac=" + mac + "' >查看历史</a></div>";
-	marker.bindPopup(popdiv);
-	marker.
-	marker.on('click',function() {
-		this.openPopup();
-	});
-
-	var popup = L.popup()
-	.setLatLng([lat-0.01, lng-0.01])
-	.setContent("I am a standalone popup.")
-	.openOn(map);
-
-	map.on('click', function(e) {
-		popup.setLatLng(e.latlng)
-		.setContent("You clicked the map at " + e.latlng.toString())
-		.openOn(map);
-	});
-
-
-
-</script>
-
+	
+    </script>
+</body>
 </html>

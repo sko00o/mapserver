@@ -18,15 +18,21 @@ import (
 	"github.com/codegangsta/cli"
 )
 
+// package flags
+var (
+	TimeStamp string
+	Version   string
+	Revision  string
+)
+
 func run(c *cli.Context) error {
 	conf, err := config.ReadConfig(c.String("conf"))
 	if err != nil {
 		log.Error("read from conf fail!", c.String("conf"))
 		return err
 	}
-	fmt.Println("conf =  ", conf)
-
-	fmt.Println("runtime.GOOS = ", runtime.GOOS)
+	log.Infoln("conf = ", conf)
+	log.Infoln("runtime.GOOS = ", runtime.GOOS)
 
 	var logger *applog.AutoDailyLoger
 	if runtime.GOOS == "windows" {
@@ -41,9 +47,9 @@ func run(c *cli.Context) error {
 	//start http server
 	go func() {
 		if runtime.GOOS == "windows" {
-			httpserver.StartHttpServer(conf.HTTPServerWin, conf)
+			httpserver.StartServer(conf.ServerWin, conf.DebugEnable)
 		} else {
-			httpserver.StartHttpServer(conf.HTTPServerLinux, conf)
+			httpserver.StartServer(conf.ServerLinux, conf.DebugEnable)
 		}
 	}()
 
@@ -58,15 +64,15 @@ func run(c *cli.Context) error {
 func main() {
 	app := cli.NewApp()
 	app.Name = "mapserver"
-	app.Usage = "mapserver"
-	app.Copyright = "578157900@qq.com"
-	app.Version = "0.0.0"
+	app.Usage = "local map server"
+	app.Copyright = "lowan@lowan-cn.com"
+	app.Version = fmt.Sprintf("Version @ %s; Revision @ %s; TimeStamp @ %s", Version, Revision, TimeStamp)
 	app.Action = run
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:   "conf,c",
 			Usage:  "Set conf path here",
-			Value:  "appserver.conf",
+			Value:  "appserver_dev.conf",
 			EnvVar: "APP_CONF",
 		},
 	}

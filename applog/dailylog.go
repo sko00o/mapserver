@@ -27,9 +27,9 @@ func NewAutoDailyLoger(dir string, prefix string) *AutoDailyLoger {
 
 	//init output
 	name := fmt.Sprintf("%v.log", filepath.Join(dir, prefix+time.Now().Format("20060102")))
-	fmt.Println("dir = ", dir, " ,name = ", name)
-	os.MkdirAll(dir, 0777)
-	file, _ := os.OpenFile(name, os.O_CREATE|os.O_RDWR|os.O_APPEND, 0)
+	log.Infoln("dir = ", dir, " ,name = ", name)
+	os.MkdirAll(dir, 0755)
+	file, _ := os.OpenFile(name, os.O_CREATE|os.O_RDWR|os.O_APPEND, 0644)
 	if file != nil {
 		log.SetOutput(file)
 	}
